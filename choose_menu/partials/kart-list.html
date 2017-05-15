@@ -1,0 +1,16 @@
+
+
+<div id="foodListWrapper">
+	<p>Please click on buy button to choose the dish.</p>
+	<ul class="list-unstyled">
+		<li class="food" ng-repeat="food in kart"
+			style="background: white url('imgs/menu/A/{{food.imgUrl}}') no-repeat">
+			<div class="food-details clearfix">
+				<h3>{{food.name}}</h3>
+				<p>{{food.price | currency:'Rs.'}}</p>
+				<p>{{food.details}}</p>
+				<button class="btn btn-info pull-right" ng-click="buy(food)">Buy</button>
+			</div>
+		</li>
+	</ul>
+</div>
